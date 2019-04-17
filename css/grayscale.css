@@ -4,7 +4,18 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
  */
 
+body{
+
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("../img/stones.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/stones.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+
+}
 #mainNav {
+  position: absolute;
   min-height: 56px;
   background-color: #fff;
 }
@@ -84,25 +95,33 @@
     outline: none;
     border-bottom: 0.25rem solid #64a19d;
   }
+
+
+}
+
+
+
+@media (max-width: 992px) {
+
+  .navbar-brand img{
+
+      display: none;
+  }
 }
 
 .masthead {
-  position: relative;
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("../img/stones.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/stones.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
+  padding: 5rem 0;
+  padding-top: 100px;
+
 }
 
 .masthead h1 {
-  font-family: 'Varela Round';
+  font-family: 'Avenir';
   font-size: 2.5rem;
+  font-weight: 900;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
@@ -115,17 +134,39 @@
   font-size: 1rem;
 }
 
+.masthead .masthead_difftxt  {
+  font-family: 'Avenir';
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  color: orange;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-background-clip: text;}
+
+.download_btn {
+  padding:20px;
+}
+
 @media (min-width: 768px) {
+
+  .masthead .margin {
+    position: relative;
+    top:30px;
+  }
+
   .masthead h1 {
     font-size: 4rem;
     line-height: 4rem;
+    font-weight: 900;
   }
-}
+  .masthead .masthead_difftxt  {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
 
 @media (min-width: 992px) {
   .masthead {
-    height: 100vh;
-    padding: 0;
+    padding: 5;
   }
   .masthead h1 {
     font-size: 6.5rem;
@@ -135,6 +176,11 @@
   .masthead h2 {
     max-width: 30rem;
     font-size: 1.25rem;
+  }
+  .masthead .masthead_difftxt  {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
   }
 }
 
@@ -167,38 +213,87 @@
 }
 
 .about-section {
-  padding-top: 10rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+  padding: 10rem 0;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/mirrors.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
 }
 
-.about-section p {
-  margin-bottom: 5rem;
+
+
+.about-section img {
+  padding: 2rem
 }
 
 .projects-section {
   padding: 10rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(35%, rgba(22, 22, 22, 0.5)), to(#161616)); 
+  /* background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/mirrors.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
 }
 
 .projects-section .featured-text {
+  padding: 2rem; 
+  color: white;
+}
+
+.projects-section .featured-text-left {
   padding: 2rem;
+  color: white;
+}
+
+.projects-section .year-right {
+  padding-right: 2rem
+}
+
+.projects-section .year-left {
+  padding-left: 2rem;
+}
+
+.projects-section h4{
+  color: orange;
+}
+
+.projects-section .padding-top: {
+  padding-top: 3rem
 }
 
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
     border-left: 0.5rem solid #64a19d;
+    color: white;
+  }
+  .projects-section .featured-text-left {
+    padding: 0 0 0 2rem;
+    padding-right: 2rem;
+    border-right: 0.5rem solid #64a19d;
+    color: white;
+  }
+  .projects-section h4{
+    color: orange;
+  }
+  .projects-section .year-left {
+  position: relative;
   }
 }
 
 .projects-section .project-text {
   padding: 3rem;
   font-size: 90%;
+  color: white;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .projects-section .project-text {
-    padding: 5rem;
+    padding: 1rem;
   }
   .projects-section .project-text hr {
     border-color: #64a19d;
@@ -206,11 +301,18 @@
     width: 30%;
   }
 }
+@media (max-width: 992px){ 
+ .projects-section .year-left {    
+    position: relative;
+    bottom: 130px;
+    right: 30px;
+  }
+}
 
 .signup-section {
-  padding: 10rem 0;
+  padding: 20rem 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/mirrors.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -230,6 +332,15 @@
 }
 
 .contact-section {
+  padding: 10rem 0;
+  position: relative;
+  margin-top: 12rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/mirrors.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
   padding: 5rem 0 0;
 }
 
@@ -274,7 +385,7 @@
 }
 
 body {
-  font-family: 'Nunito';
+  font-family: 'Avenir';
   letter-spacing: 0.0625em;
 }
 
