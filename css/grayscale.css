@@ -280,8 +280,10 @@ body{
   .projects-section h4{
     color: orange;
   }
-  .projects-section .year-left {
-  position: relative;
+  .projects-section .year-left {    
+    position: relative;
+    bottom: 180px;
+    right: 30px;
   }
 }
 
@@ -304,7 +306,7 @@ body{
 @media (max-width: 992px){ 
  .projects-section .year-left {    
     position: relative;
-    bottom: 130px;
+    bottom: 180px;
     right: 30px;
   }
 }
