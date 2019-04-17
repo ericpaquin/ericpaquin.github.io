@@ -304,7 +304,7 @@ body{
 @media (max-width: 992px){ 
  .projects-section .year-left {    
     position: relative;
-    bottom: 130px;
+    bottom: 200px;
     right: 30px;
   }
 }
